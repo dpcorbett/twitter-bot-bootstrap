@@ -1,7 +1,7 @@
 {
-  "name": "twitter-bot",
+  "name": "dpc-twitter-app",
   "version": "1.0.0",
-  "description": "twitter bot bootstrap",
+  "description": "twitter bot",
   "main": "index.js",
   "devDependencies": {
     "standard": "^8.6.0"
@@ -10,12 +10,23 @@
     "start": "node index.js",
     "test": "standard && node index.js"
   },
-  "author": "",
+  "author": "Dave Corbett",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^4.0.0",
     "twit": "^2.2.5",
     "unique-random-array": "^1.0.0",
     "unirest": "^0.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpcorbett/twitter-bot-bootstrap.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "bugs": {
+    "url": "https://github.com/dpcorbett/twitter-bot-bootstrap/issues"
+  },
+  "homepage": "https://github.com/dpcorbett/twitter-bot-bootstrap#readme"
 }
