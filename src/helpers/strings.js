@@ -7,7 +7,8 @@ module.exports = {
     'javascript',
     'node.js',
     'nodejs',
-    'linux'
+    'linux',
+    'debian'
   ],
   queryStringSubQuery: [
     '',
