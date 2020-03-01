@@ -60,7 +60,7 @@ let retweet = function () {
         // setup http call
         var httpCall = sentiment.init()
 
-        httpCall.send('txt=' + retweetText).end(function (result) {
+        httpCall.send('text=' + retweetText).end(function (result) {
           var negSentim = result.body.neg
           console.log(negSentim)
           // if sentiment is Negative and the confidence is above 75%
