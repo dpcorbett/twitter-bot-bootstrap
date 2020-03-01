@@ -61,11 +61,10 @@ let retweet = function () {
         var httpCall = sentiment.init()
 
         httpCall.send('txt=' + retweetText).end(function (result) {
-          var sentim = result.body.result.sentiment
-          var confidence = parseFloat(result.body.result.confidence)
-          console.log(confidence, sentim)
+          var negSentim = result.body.neg
+          console.log(negSentim)
           // if sentiment is Negative and the confidence is above 75%
-          if (sentim === 'Negative' && confidence >= 75) {
+          if (negSentim === 1) {
             console.log('RETWEET NEG NEG NEG', sentim, retweetText)
             return
           }
@@ -158,8 +157,8 @@ setInterval(favoriteTweet, 1000 * 60 * favoriteFrequency)
 
 // STREAM API for interacting with a USER =======
 // set up a user stream
-var stream = Twitter.stream('user')
-
+//var stream = Twitter.stream('user')
+var stream = Twitter.stream('statuses/filter', { track: '@DaveRaven72' });
 // REPLY-FOLLOW BOT ============================
 
 // what to do when someone follows you?

@@ -7,8 +7,8 @@ const unirest = require('unirest')
 var sentiment = {}
 
 sentiment.init = function () {
-  return unirest.post('https://community-sentiment.p.mashape.com/text/')
-  .header('X-Mashape-Key', process.env.SENTIMENT_KEY)
+  return unirest.post('https://text-sentiment.p.rapidapi.com/analyze')
+  .header('X-RapidAPI-Key', process.env.SENTIMENT_KEY)
   .header('Content-Type', 'application/x-www-form-urlencoded')
   .header('Accept', 'application/json')
 }
